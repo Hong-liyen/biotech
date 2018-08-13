@@ -1,0 +1,251 @@
+$mainColor: #566892;
+@mixin breakpoint($class) {
+    @if $class==xs {
+        @media (max-width: 425px) {
+            @content;
+        }
+    }
+    @else if $class==sm {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $class==md {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+    @else if $class==lg {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}
+
+body {
+    font-family: 'Microsoft Yahei', serif;
+}
+
+section {
+    padding: 2.4em 0;
+}
+
+.title {
+    color: $mainColor;
+    padding: 0.2em 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.6em;
+    margin-bottom: 1.2em;
+    @include breakpoint(md) {
+        margin-top: 1.2em;
+    }
+    span {
+        font-size: 0.8em;
+        color: #ccc;
+        margin-left: 0.2em;
+    }
+}
+
+// slider
+.slider {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background-image: url(../images/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 350px;
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        p {
+            font-weight: 500;
+            font-size: 1.2em;
+            margin-top: 0.6em;
+        }
+    }
+}
+
+// footer
+footer {
+    color: #fff;
+    padding: 0.6em 0;
+}
+
+#index {
+    .left {
+        a {
+            display: block;
+            padding: 0.4em 1em;
+            text-decoration: none;
+            color: #666;
+            &:nth-child(odd) {
+                background-color: #e7e7e7;
+            }
+            &:last-child {
+                display: inline-block;
+                border: 0;
+                background-color: #6c757d;
+                color: #fff;
+            }
+            &:hover {
+                opacity: 0.7;
+            }
+            span {
+                margin-right: 1.2em;
+                color: #999;
+            }
+        }
+    }
+    .right {
+        img {
+            width: 13em;
+            @include breakpoint(md) {
+                width: 100%;
+                margin-bottom: 1.2em;
+            }
+        }
+    }
+}
+
+#news,
+#product_item {
+    img {
+        margin-bottom: 1.2em;
+    }
+    p,
+    ol {
+        color: #666;
+        line-height: 1.8;
+    }
+    .table {
+        color: #666;
+        thead {
+            color: #fff;
+        }
+        tbody {
+            tr {
+                &:nth-child(even) {
+                    background-color: #e7e7e7;
+                }
+                a {
+                    color: #666;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+#about {
+    h4 {
+        color: #4d887b;
+        margin-top: 1.2em;
+    }
+    p,
+    ol {
+        color: #666;
+        line-height: 1.8;
+    }
+}
+
+#contact {
+    color: #666;
+    line-height: 1.8;
+    h4 {
+        font-size: 1.2em;
+        span {
+            font-size: 0.8em;
+            margin-right: 0.8em;
+            opacity: 0.7;
+        }
+    }
+    img {
+        height: 2.4em;
+    }
+    label {
+        text-align: right;
+        @include breakpoint(sm) {
+            text-align: left;
+        }
+    }
+}
+
+#product,
+#product_item {
+    img {
+        @include breakpoint(lg) {
+            width: 100%;
+        }
+    }
+    .info {
+        display: inline-block;
+        margin-left: 2.4em;
+        vertical-align: top;
+        line-height: 2;
+        @include breakpoint(lg) {
+            margin: 1.2em 0;
+        }
+        .title {
+            color: #4d887b;
+            border: 0;
+            margin: 0;
+            .label {
+                font-size: 0.6em;
+            }
+        }
+        .label {
+            font-size: 1em;
+            margin-right: 1.2em;
+            color: #666;
+        }
+        .price {
+            font-size: 1.6em;
+            .label {
+                font-size: 0.6em;
+            }
+        }
+        input {
+            display: inline-block;
+            text-align: center;
+        }
+    }
+}
+
+#product {
+    .info {
+        line-height: 1.5;
+    }
+}
+
+#product_item {
+    img {
+        height: 30em;
+    }
+    .nav-tabs {
+        margin-top: 1.2em;
+        border-bottom: 2px solid #166D94;
+        padding-bottom: 0;
+    }
+    .nav-tabs .nav-link {
+        border-radius: 10px 10px 0px 0px;
+        background: #B8CEDA;
+        color: #fff;
+    }
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
+        background: #176D95;
+        color: #fff;
+        border: 0;
+    }
+    .tab-content {
+        padding: 1.2em 0.6em;
+        color: #5B7877;
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>醫藥資訊</title>
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">關於我們
+        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news_item.html">醫藥資訊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">我要聯採</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯絡我們</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav px-3">
+                    <li class="nav-item text-nowrap">
+                        <a class="nav-link" href="#">Mary@mor-e.com.tw</a>
+                    </li>
+                    <li class="nav-item text-nowrap">
+                        <a class="nav-link" href="#">登入</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="" srcset="" class="img-fluid">
+                </a>
+                <p>Biotech pharmaceutical electronic trading information platform</p>
+            </div>
+        </div>
+    </div>
+    <section id="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title">醫藥資訊
+                        <span>Pharmaceutical Information</span>
+                    </div>
+                    <p>類別 : 藥品2015-08-03</p>
+                    <h4 class="text-primary">臨床試驗缺師資料之分析方法</h4>
+                    <img src="./images/news_01.jpg" alt="" class="img-fluid">
+                    <p>新藥發展須依賴臨床試驗來評估藥物的安全性與有效性，臨床試驗執行過程中，難免會有試驗資料無法完整收集的情形。例如受試者因為療效太好或太差而退出試驗，受試者因搬家、或藥物副作用太大而無法完成試驗等，導致缺失資料(missing data)的產生。這些原因可能與試驗藥物有關，也可能與試驗藥物無關。
+                    </p>
+                    <p>若進一步討論臨床試驗缺失資料的類型，則大約可以分為三類:</p>
+                    <ol>
+                        <li>最終型(terminal pattern) ：受試者自某個時間點退出試驗後就再也不會回到此試驗；</li>
+                        <li>中間型(intermittent pattern) ：受試者某個時間點退出試驗後之後還會再返回此試驗；</li>
+                        <li>混合型(hybrid) ：混合最終型與中間型兩種型態，即受試者某個時間點退出試驗後隔一段時間再回到此試驗，之後又退出試驗。</li>
+                    </ol>
+                    <p>若缺失資料處理的方式是將不具完整資料的受試者完全排除在分析外，則會造成諸多的問題，包括(1)違背了 「意圖治療(intent to treat，ITT)」的定義(所有接受隨機分配的受試者皆應納入統計分析)，造成選擇偏差 (selection bias); (2)排除因療效太好或太差而退出試驗的受試者，可能造成療效估計的偏差; (3)由於樣本數 減少，參數估計變異數增大，導致統計檢定力降低; (4)中途退出試驗的病人對試驗藥物的順從性(compliance )大多不佳，而缺少此類病人訊息，將會低估試驗藥物療效及安全結果的變異性;
+                        (5)許多統計檢定皆假設資料 呈常態分配，若排除資料太多，可能不再符合常態的假設，檢定結果可能導致錯誤的推論; (6) 完整受試者群 體(complete patient population)無法代表整個目標病人群體(target patient population)。因此，缺失資 料的處理有一定的困難度，目前仍沒有一個普遍被接受的標準作法，法規單位也只能針對一般原則訂定相關 指引。最早的指引為1998年ICH E9「臨床試驗統計指導原則(Statistical
+                        Principles of Clinical Trials)」 (1)，之後歐盟於1999年公布「缺失資料的考量重點(Points to Consider on Missing Data)」，2010年發布 「療效確認性臨床試驗中缺失資料的處理基準(Guideline on Missing Data inConfirmatory Clinical Trials)」 (2)。美國FDA雖然沒有公布正式的指引，但委託美國國家科學院針對此項議題集結產、官、學討論，並於2010
+                        年出版『臨床試驗缺失資料的預防與處理(The Prevention and Treatment of Missing Data in Clinical Trial)』 (3) 一書。書中針對臨床試驗設計、管理、不同缺失機制下統計分析方法、與未來研究方向均給予建議。這些相 關的指導原則，可以作為醫師、藥廠、或臨床試驗申請者的參考依據。本文將針對上述缺失資料的相關問題， 包括缺失資料的機制分類、對應的統計分析方法、及如何預防缺失資料的產生等問題逐一闡述。第二節將介紹
+                        缺失資料的機制分類與其假設;第三節說明臨床試驗常用的缺失資料插補方法，並討論其優缺點;最後對於如何有 效降低臨床試驗的缺失資料提出討論。</p>
+                    <div class="mt-3 text-right">
+                        <a class="btn btn-sm btn-secondary" href="index.html">回上頁</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">Copyright c All Rights Reserved</div>
+                <div class="col-md-6 text-right">服務專線 0800-000808</div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</html>
